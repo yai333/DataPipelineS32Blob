@@ -297,12 +297,12 @@ class S3ToblobStack(core.Stack):
             resources=[task_definition.task_role.role_arn]
         ))
 
-        datawranger_layer = lambda_.LayerVersion(self, "DataWrangerLayer",
-                                                 code=lambda_.Code.from_asset(
-                                                     "./layers/awswrangler-layer-1.9.6-py3.6.zip"),
-                                                 compatible_runtimes=[
-                                                     lambda_.Runtime.PYTHON_3_6]
-                                                 )
+        datawrangler_layer = lambda_.LayerVersion(self, "DataWranglerLayer",
+                                                  code=lambda_.Code.from_asset(
+                                                      "./layers/awswrangler-layer-1.9.6-py3.6.zip"),
+                                                  compatible_runtimes=[
+                                                      lambda_.Runtime.PYTHON_3_6]
+                                                  )
 
         fn_create_s3batch_manifest = lambda_.Function(self, "CreateS3BatchManifest",
                                                       runtime=lambda_.Runtime.PYTHON_3_6,
@@ -312,7 +312,7 @@ class S3ToblobStack(core.Stack):
                                                       code=lambda_.Code.from_asset(
                                                           "./src"),
                                                       layers=[
-                                                          datawranger_layer]
+                                                          datawrangler_layer]
                                                       )
 
         fn_create_s3batch_manifest.add_environment(
