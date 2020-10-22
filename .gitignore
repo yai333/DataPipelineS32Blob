@@ -1,0 +1,11 @@
+*.swp
+package-lock.json
+s3toblob/__pycache__
+s3toblob/.pytest_cache
+s3toblob/.env
+s3toblob/.vscode
+*.egg-info
+
+# CDK asset staging directory
+s3toblob/.cdk.staging
+s3toblob/cdk.out
