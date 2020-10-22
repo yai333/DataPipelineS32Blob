@@ -1,6 +1,7 @@
 # An Automated Data Pipeline to Copy Data from Amazon S3 to Azure Storage
 
 This repo provide approach to build a data pipeline to copy data periodically from S3 to Azure Storage using AWS Data Wrangler, Amazon S3 Inventory, Amazon S3 Batch Operations, Athena, Fargate, and AzCopy.
+
 ![alt Infrastructure](infrastructure.png)
 
 For more details, please https://yia333.medium.com/building-an-automated-data-pipeline-to-copy-data-from-amazon-s3-to-azure-storage-2a1b8d1ac6eb
