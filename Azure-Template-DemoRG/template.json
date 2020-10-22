@@ -25,11 +25,7 @@
                     "virtualNetworkRules": [],
                     "ipRules": [
                         {
-                            "value": "13.54.150.182",
-                            "action": "Allow"
-                        },
-                        {
-                            "value": "202.67.103.129",
+                            "value": "13.54.150.100",
                             "action": "Allow"
                         }
                     ],
